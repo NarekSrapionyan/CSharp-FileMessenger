@@ -5,7 +5,8 @@ class Program
 {
     static void Main(string[] args)
     {
-        string filePath = "messages.txt";
+        string filePath = Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", "messages.txt");
+        filePath = Path.GetFullPath(filePath);
         long lastPosition = 0;
 
         Console.WriteLine("Reader started.");
